@@ -42,9 +42,6 @@ def get_cinemas(cityId):
     driver.execute_script(js)
     time.sleep(3) #一定要睡一会儿，不然网页加载不全，获取不到影院信息
 
-    """影院所属城市,睡一会儿后再获取，这个元素加载出来比较慢"""
-    city = driver.find_element_by_css_selector('#selectedCity').text
-
     """看看影院列表是否有折叠隐藏"""
     try:
         more = driver.find_element_by_css_selector('#moreCinema').get_attribute('class')
@@ -64,6 +61,8 @@ def get_cinemas(cityId):
 
     html = driver.page_source
     xpath_parser = etree.HTML(html)
+
+    city = driver.find_element_by_css_selector('#selectedCity').text
 
     # 影院名字列表
     name_list = xpath_parser.xpath('//p[@class="title"]//span/text()')

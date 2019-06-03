@@ -51,8 +51,8 @@ def isEqual(ttglyph_a, ttglyph_b):
     return True
 
 def refresh(dict, ttGlyphList_a, ttGlyphList_data):
-    data_dict = {"uniE0A9": "0", "uniEF4F": "1", "uniEAEE": "2", "uniEB0C": "3", "uniE517": "4",
-                 "uniF1F8": "5", "uniF798": "6", "uniF346": "7", "uniE11A": "8", "uniEE4F": "9"}
+    data_dict = {"uniE7E6": "0", "uniF8C1": "1", "uniEC38": "2", "uniE5EC": "3", "uniE0DE": "4",
+                 "uniE5BA": "5", "uniF5E4": "6", "uniEF79": "7", "uniF164": "8", "uniF431": "9"}
     data_keys = data_dict.keys()
     for ttglyph_data in ttGlyphList_data:
         if getValue(ttglyph_data, 'name') in data_keys:

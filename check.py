@@ -3,7 +3,7 @@ import re
 names = []
 with open('tickets.txt', 'r', encoding='utf-8') as f:
     lines = f.readlines()
-    with open('result.txt', 'w+', encoding='utf-8') as w:
+    with open('result.txt', 'w', encoding='utf-8') as w:
         for line in lines:
             patt0 = re.compile(r"\'city\': \'(\S+)\'")
             city = patt0.search(line)

@@ -178,7 +178,8 @@ def begin():
         gather.insert(item)
     print(">>>>>>>>>>>>>>>>整合完毕>>>>>>>>>>>>>>>>>")
 
-begin()
+if __name__ == '__main__':
+    begin()
 
 #
 # # 糯米
